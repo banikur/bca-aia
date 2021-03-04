@@ -62,7 +62,7 @@
             width: 100%;
             height: 100%;
             z-index: 0;
-            background-color: rgba(58, 11, 177, 0.523);
+            background-color: rgba(8, 15, 174, 0.4);
         }
     </style>
 </head>
@@ -100,7 +100,7 @@
         </div>
     </div>
     <!-- START: Page Background -->
-    <div class="nk-page-background-fixed" style="background-image: url('assets/images/bg-ready.jpg') ;"></div>
+    <div class="nk-page-background-fixed" style="background-image: url('assets/images/logo/japan1.jpg') ;"></div>
     <!-- END: Page Background -->
     <!-- START: Search Modal -->
     <div class="nk-modal modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-hidden="true">
