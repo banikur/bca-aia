@@ -16,7 +16,7 @@ Route::get('/test', function () {
 });
 
 Route::get('/', function () {
-    return view('welcome2');
+    return view('welcome');
 });
 
 Route::get('/comming-soon', function () {

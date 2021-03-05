@@ -1430,7 +1430,8 @@ ul.minicart .cart-price .new {
 /* 5. Slider */
 
 .slider-bg {
-    background-image: url(../img/slider/slider_bg.jpg);
+    /* background-image: url(../img/slider/slider_bg.jpg); */
+    background-image: url(../../images/logo/japan1.jpg);
     background-position: center;
     background-size: cover;
     padding: 260px 0;
@@ -1728,7 +1729,7 @@ ul.minicart .cart-price .new {
     background-image: url(../img/bg/brand_bg.jpg);
     background-position: center;
     background-size: cover;
-    padding: 60px 0;
+    padding: 20px 0;
     position: relative;
 }
 
@@ -1737,7 +1738,7 @@ ul.minicart .cart-price .new {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 82px;
+    height: 62px;
 }
 
 .brand-item img {
@@ -3347,14 +3348,15 @@ ul.minicart .cart-price .new {
 /* 15. Features */
 
 .features-bg {
-    background-image: url(../img/bg/features_bg.jpg);
+    /* background-image: url(../img/bg/features_bg.jpg); */
+    background-image: url(../../images/logo/bg-ready.jpg);
     background-position: center;
     background-size: cover;
 }
 
 .features-item {
     border-radius: 10px;
-    background-color: rgb(29, 18, 39);
+    background-color: rgb(60, 38, 81);
     box-shadow: 0px 5px 27px 0px rgba(17, 8, 23, 0.2);
     padding: 45px 35px;
 }

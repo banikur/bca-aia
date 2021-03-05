@@ -83,17 +83,15 @@
                 </div>
             </div>
             <div class="nk-gap-2"></div>
-            @include('template.plugins.category')
         </div>
         <div class="nk-gap-2"></div>
-        @include('template.plugins.footer')
     </div>
     <!-- START: Page Background -->
     <!-- <div class="nk-page-background-fixed" style="background-image: url('assets/images/bg-ready.jpg') ;"></div> -->
     <!-- <img class="nk-page-background-top" src="assets/images/bg-ready.jpg" alt="">
     <img class="nk-page-background-bottom" src="assets/images/bg-ready.jpg" alt=""> -->
-    <img class="nk-page-background-top" src="assets/images/bg-top.png" alt="">
-    <img class="nk-page-background-bottom" src="assets/images/bg-bottom.png" alt="">
+    <!-- <img class="nk-page-background-top" src="assets/images/bg-top.png" alt="">
+    <img class="nk-page-background-bottom" src="assets/images/bg-bottom.png" alt=""> -->
 
 </body>
 @include('template.footer.footer')

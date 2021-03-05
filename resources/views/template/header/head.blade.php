@@ -20,4 +20,3 @@
 <link rel="stylesheet" href="assets/geco/css/default.css">
 <link rel="stylesheet" href="assets/geco/css/style.css">
 <link rel="stylesheet" href="assets/geco/css/responsive.css">
-

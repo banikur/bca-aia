@@ -14,9 +14,14 @@
             </div>
         </div>
     </div>
-
+    <main>
+        @include('template.navbar.navbar')
+        @yield('content')
+        @include('template.plugins.brand')
+    </main>
 </body>
 @include('template.footer.footer')
+@include('template.footer.footer_script')
 @yield('javascripts')
 
 </html>

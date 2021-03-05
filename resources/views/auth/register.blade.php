@@ -154,7 +154,6 @@
             </div>
         </div>
         <div class="nk-gap"></div>
-        @include('template.plugins.footer')
     </div>
     <!-- START: Page Background -->
     <!-- <div class="nk-page-background-fixed" style="background-image: url('assets/images/bg-ready.jpg') ;"></div> -->
