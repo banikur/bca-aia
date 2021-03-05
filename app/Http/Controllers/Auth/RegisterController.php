@@ -74,13 +74,6 @@ class RegisterController extends Controller
             'informasi' => $data['informasi'],
             'password' => Hash::make($data['password']),
         ]);
-        $id_user = User::orderby('created_at','DESC')->first();
-       $point = DB::table('tbl_point_user')->insert([
-            'id_user' => $id_user->id,
-            'objective'=>'register',
-            'point'=>100,
-            'keterangan'=>null,
-        ]);
-        
+       
     }
 }
