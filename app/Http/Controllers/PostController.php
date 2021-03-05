@@ -33,8 +33,7 @@ class PostController extends Controller
 
     public function index()
     {
-        $post = \App\Post::all();
-        // echo($post);
+        $post = Post::all();
         return view('home', ['data_gambar' => $post]);
     }
 }
