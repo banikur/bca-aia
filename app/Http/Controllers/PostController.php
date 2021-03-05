@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
-
+use App\Point;
+use DB;
+use Auth;   
 class PostController extends Controller
 {
     public function gambar(Request $request)
@@ -33,7 +35,10 @@ class PostController extends Controller
 
     public function index()
     {
-        $post = Post::all();
-        return view('home', ['data_gambar' => $post]);
+        $data['data_gambar'] = Post::where('user_id',Auth::user()->id)->get();
+        $data['count_point'] = DB::table('tbl_point_user')->where('id_user',Auth::user()->id)->sum('point');
+        return view('home', $data);
     }
+
+   
 }

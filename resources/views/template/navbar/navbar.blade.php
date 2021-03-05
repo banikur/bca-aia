@@ -10,6 +10,7 @@
                     @auth
                     <!-- <li class="scroll"><a class="navbar-brand" href="{{ url('/') }}">I</a></li> -->
                     <li class="scroll"><a class="navbar-brand" href="{{ url('/home') }}">Gallery</a></li>
+                    <li class="scroll"><a class="navbar-brand" href="{{ url('/avatar') }}">Avatar</a></li>
                     <li class="scroll"><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" title="Sign Out"><i class="fa fa-sign-out"></i></a> </li>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf

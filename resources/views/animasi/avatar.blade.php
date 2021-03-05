@@ -26,7 +26,7 @@
                         {{-- DISINI --}}
                         <div id = "selectType" style="margin-top: 5px; margin-bottom: 5px;">
                             <!-- <label for="file_type"> Choose a type : </label> -->
-                            <label><input type="radio" name="file_type" value="image" /> Image </label>
+                            <label><input type="radio" name="file_type" value="image" checked /> Image </label>
                             <!-- <label><input type="radio" name="file_type" value="video" /> Video </label> -->
                             <p>*The file size should be less than 35MB.</p>
                         </div>
@@ -60,16 +60,7 @@
                     </div>
                 </div>
             </div>
-            {{-- <div class="col-md-4">
-                <div class="nk-widget nk-widget-highlighted">
-                    <h4 class="nk-widget-title"><span><span class="text-main-1">Total</span> Reward</span></h4>
-                    <div class="nk-widget-content">
-                        <div class="nk-widget-match">
-                        {{-- DISINI --}}
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
+            
         </div>
     </div>
 </div>
