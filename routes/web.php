@@ -19,9 +19,11 @@ Route::get('/comming-soon', function () {
     return view('commingsoon');
 });
 
+Route::get('/avatar', function () {
+    return view('animasi.avatar');
+});
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home', 'PostController@index')->name('data_gambar');
 Route::post('/posts', 'PostController@gambar')->name('posts.gambar');
