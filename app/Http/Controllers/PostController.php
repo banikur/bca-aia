@@ -35,7 +35,7 @@ class PostController extends Controller
 
     public function index()
     {
-        $data['data_gambar'] = Post::where('user_id',Auth::user()->id)->get();
+        $data['data_gambar'] = Post::all();
         $data['count_point'] = DB::table('tbl_point_user')->where('id_user',Auth::user()->id)->sum('point');
         return view('home', $data);
     }

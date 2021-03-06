@@ -7,18 +7,7 @@
 </head>
 
 <body>
-    <div id="preloader">
-        <div id="loading-center">
-            <div id="loading-center-absolute">
-                <img src="assets/geco/img/icon/preloader.svg" alt="">
-            </div>
-        </div>
-    </div>
-    <main>
-        @include('template.navbar.navbar')
-        @yield('content')
-        @include('template.plugins.brand')
-    </main>
+    @yield('content')
 </body>
 @include('template.footer.footer')
 @include('template.footer.footer_script')

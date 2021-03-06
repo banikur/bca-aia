@@ -3348,10 +3348,11 @@ ul.minicart .cart-price .new {
 /* 15. Features */
 
 .features-bg {
-    /* background-image: url(../img/bg/features_bg.jpg); */
-    background-image: url(../../images/logo/bg-ready.jpg);
+    background-image: url(../img/bg/features_bg.jpg);
+    /* background-image: url(../../images/logo/bg-ready.jpg); */
     background-position: center;
     background-size: cover;
+    background-color: rgba(8, 15, 174, 0.4);
 }
 
 .features-item {
