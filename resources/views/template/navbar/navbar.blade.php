@@ -15,7 +15,6 @@
                             <div id="mobile-menu" class="navbar-wrap d-none d-lg-flex">
                                 <ul>
                                     @if (Route::has('login'))
-                                    <li class="show"><a href="{{ url('/') }}">Home</a></li>
                                     @auth
                                     <li class="show"><a href="{{ url('/') }}">Home</a></li>
                                     <li><a href="{{ url('/home') }}">Gallery</a></li>
