@@ -25,6 +25,7 @@
                                         @csrf
                                     </form>
                                     @else
+                                    <li class="show"><a href="{{ url('/') }}">Home</a></li>
                                     <li><a href="{{ route('login') }}">Log in</a></li>
                                     @if (Route::has('register'))
                                     <!-- <li><a href="{{ route('register') }}">Register</a></li> -->
@@ -33,7 +34,6 @@
                                     @endif
                                 </ul>
                             </div>
-
                         </nav>
                     </div>
                     <div class="mobile-menu"></div>

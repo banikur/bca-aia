@@ -131,4 +131,11 @@
         }, 10);
     }
 </script>
+<script>
+    $(document).ready(function() {
+        $(window).load(function() {
+            $('#preloader').delay(6000).fadeOut();
+        });
+    });
+</script>
 @endsection
