@@ -37,6 +37,11 @@ class PostController extends Controller
     {
         $data['data_gambar'] = Post::all();
         $data['count_point'] = DB::table('tbl_point_user')->where('id_user',Auth::user()->id)->sum('point');
+        // $data['data_klasmen'] = DB::select('id_user','name')->sum('point')->count('id_user')
+        //                         ->from('tbl_point_user as b')->leftJoin('users as a')->on('b.id_user','=','a.id')
+        //                         ->groupBy('id_user')->orderBysum('point DESC')->get();
+        // Point::groupBy('id_user')->sum('point')->count('id_user')
+        // dd($data_klasmen);
         return view('home', $data);
     }
 

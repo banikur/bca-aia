@@ -30,4 +30,6 @@ Route::get('/avatar', function () {
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home', 'PostController@index')->name('data_gambar');
+Route::get('/review', 'FeedbackController@index');
+Route::post('/reviewPost', 'FeedbackController@store')->name('reviewpost');
 Route::post('/posts', 'PostController@gambar')->name('posts.gambar');

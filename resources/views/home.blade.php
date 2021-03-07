@@ -53,7 +53,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
             <div class="col-md-4">
                 <div class="nk-widget nk-widget-highlighted">
@@ -68,6 +67,20 @@
                     </div>
                 </div>
             </div>
+            <div class="nk-gap"></div>
+            <div class="col-md-4">
+                <div class="nk-widget nk-widget-highlighted">
+                    <h4 class="nk-widget-title"><span><span class="text-main-1"></span>Review</span></h4>
+                    <div class="nk-widget-content">
+                        <div class="nk-widget-match">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary fadeIn" data-toggle="modal" data-target="#uploadReview">
+                                Input Review
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="nk-gap"></div>
         <div class="row">
@@ -76,7 +89,7 @@
                     <h4 class="nk-widget-title"><span><span class="text-main-1">Klasemen</span> Point</span></h4>
                     <div class="nk-widget-content">
                         <div class="nk-widget-match">
-                            <!-- Button trigger modal -->
+                            {{-- {{ $data_klasmen }} --}}
 
                         </div>
                     </div>
@@ -85,7 +98,7 @@
         </div>
     </div>
 </div>
-<!-- Modal -->
+<!-- Modal Gambar-->
 <div class="modal fade" id="uploadImage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -102,6 +115,28 @@
                     </div>
                     <div class="form-group">
                         <textarea name="description" class="form-control"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-info btn-block">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Review-->
+<div class="modal fade" id="uploadReview" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="{{ route('reviewpost') }}" method="post" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                    <div class="form-group">
+                        <textarea name="testimonial" class="form-control"></textarea>
                     </div>
                     <button type="submit" class="btn btn-info btn-block">Save</button>
                 </form>
