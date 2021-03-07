@@ -31,6 +31,11 @@ class PostController extends Controller
         }
 
         $post->save();
+        DB::table('tbl_point_user')->insert([
+            'id_user' => Auth::user()->id,
+            'objective' => 'Unggah Aktifitas',
+            'point' => 10,
+        ]);
         return back();
     }
 
@@ -38,16 +43,19 @@ class PostController extends Controller
     {
         $data['data_gambar'] = Post::all();
         $data['count_point'] = DB::table('tbl_point_user')->where('id_user', Auth::user()->id)->sum('point');
-        // $data['data_klasmen'] = DB::select('id_user','name')->sum('point')->count('id_user')
-        //                         ->from('tbl_point_user as b')->leftJoin('users as a')->on('b.id_user','=','a.id')
-        //                         ->groupBy('id_user')->orderBysum('point DESC')->get();
-        // Point::groupBy('id_user')->sum('point')->count('id_user')
-        // dd($data_klasmen);
-
+       
         $data_klasmen = Point::leftjoin('users', 'tbl_point_user.id_user', 'users.id')
             ->groupBy('users.name')
             ->selectRaw('users.name, sum(tbl_point_user.point) as sum')
             ->get();
+        $your_rank = 0;
+        for ($i = 0; $i < count($data_klasmen); $i++) {
+            if ($data_klasmen[$i]['name'] ==  Auth::user()->name) {
+                $your_rank = $i + 1;
+            }
+        }
+
+        $data['your_rank']= $your_rank .' dari '. count($data_klasmen);
         $data['data_klasmen'] = json_decode($data_klasmen);
         return view('home', $data);
     }

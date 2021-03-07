@@ -20,8 +20,12 @@ class FeedbackController extends Controller
         $feedback = New Feedback;
         $feedback->testimonial = $request->testimonial;
         $feedback->user_id = auth()->id();
-
         $feedback->save();
+        DB::table('tbl_point_user')->insert([
+            'id_user'=> Auth::user()->id,
+            'objective'=> 'Testimoni',
+            'point'=> 10,
+            ]);
         return back();
     }
 }
