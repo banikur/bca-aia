@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Feedback;
-use DB;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class FeedbackController extends Controller
 {
     public function index(){
-        return view('feedback/review');
+        $data['testimoni'] = DB::table('testimoni')->leftjoin('users', 'testimoni.user_id', 'users.id')
+        ->get();
+        return view('feedback.review',$data);
     }
 
     public function store(Request $request)

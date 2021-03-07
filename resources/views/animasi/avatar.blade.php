@@ -19,9 +19,9 @@
     <div class="">
         @yield('content')
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-8">
                 <div class="nk-widget nk-widget-highlighted" style="min-height: 500px;">
-                    <h4 class="nk-widget-title"><span>{{ __('Avatar Download') }}</span></h4>
+                    <h4 class="nk-widget-title"><span>{{ __('Avatar') }}</span></h4>
                     <div class="nk-widget-content">
                         {{-- DISINI --}}
                         <div id="selectType" style="margin-top: 5px; margin-bottom: 5px;">
@@ -60,7 +60,31 @@
                     </div>
                 </div>
             </div>
-
+            <div class="col-md-4">
+                <div class="nk-widget nk-widget-highlighted">
+                    <h4 class="nk-widget-title"><span><span class="text-main-1">Unggah</span> Gambar</span></h4>
+                    <div class="nk-widget-content">
+                        <div class="nk-widget-match">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary fadeIn" data-toggle="modal" data-target="#uploadImage">
+                                Upload Image
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="nk-gap"></div>
+                <div class="nk-widget nk-widget-highlighted">
+                    <h4 class="nk-widget-title"><span><span class="text-main-1"></span>Review</span></h4>
+                    <div class="nk-widget-content">
+                        <div class="nk-widget-match">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary fadeIn" data-toggle="modal" data-target="#uploadReview">
+                                Input Review
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

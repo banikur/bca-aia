@@ -22,7 +22,7 @@
                 <div class="nk-widget nk-widget-highlighted">
                     <h4 class="nk-widget-title"><span>{{ __('Selamat Datang') }}</span></h4>
                     <div class="nk-widget-content">
-                        History Reward Anda : {{ $count_point }}
+                        History Reward Anda : {{ number_format($count_point,0,',','.') }} Point
                     </div>
                 </div>
             </div>
@@ -66,9 +66,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="nk-gap"></div>
-            <div class="col-md-4">
+                <div class="nk-gap"></div>
                 <div class="nk-widget nk-widget-highlighted">
                     <h4 class="nk-widget-title"><span><span class="text-main-1"></span>Review</span></h4>
                     <div class="nk-widget-content">
@@ -89,8 +87,23 @@
                     <h4 class="nk-widget-title"><span><span class="text-main-1">Klasemen</span> Point</span></h4>
                     <div class="nk-widget-content">
                         <div class="nk-widget-match">
-                            {{-- {{ $data_klasmen }} --}}
-
+                            <div class="col-md-12">
+                                <table class="table" style="width: 100%;color:white;">
+                                    <tr>
+                                        <th scope="row">No.</th>
+                                        <th>Nama User</th>
+                                        <th>Total Point</th>
+                                    </tr>
+                                    <?php $no = 1; ?>
+                                    @foreach($data_klasmen as $dt)
+                                    <tr>
+                                        <td scope="row">{{$no++}}</td>
+                                        <td>{{$dt->name}}</td>
+                                        <td>{{$dt->sum}}</td>
+                                    </tr>
+                                    @endforeach
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -98,52 +111,7 @@
         </div>
     </div>
 </div>
-<!-- Modal Gambar-->
-<div class="modal fade" id="uploadImage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form action="{{ route('posts.gambar') }}" method="post" enctype="multipart/form-data">
-                    {{ csrf_field() }}
-                    <div class="form-group">
-                        <input type="file" name="image" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <textarea name="description" class="form-control"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-info btn-block">Save</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 
-<!-- Modal Review-->
-<div class="modal fade" id="uploadReview" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form action="{{ route('reviewpost') }}" method="post" enctype="multipart/form-data">
-                    {{ csrf_field() }}
-                    <div class="form-group">
-                        <textarea name="testimonial" class="form-control"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-info btn-block">Save</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 
 @endsection
 @section('javascript')

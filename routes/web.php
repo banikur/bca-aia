@@ -26,6 +26,9 @@ Route::get('/comming-soon', function () {
 Route::get('/avatar', function () {
     return view('animasi.avatar');
 });
+Route::get('/mini-games', function () {
+    return view('games.games');
+});
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

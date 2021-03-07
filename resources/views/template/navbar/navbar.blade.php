@@ -18,8 +18,6 @@
                                     @auth
                                     <li class="show"><a href="{{ url('/') }}">Home</a></li>
                                     <li><a href="{{ url('/home') }}">Gallery</a></li>
-                                    <li><a href="{{ url('/avatar') }}">Avatar</a></li>
-                                    <li><a href="{{ url('/avatar') }}">Testimoni</a></li>
                                     <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" title="Sign Out"><i class="fa fa-sign-out"></i></a> </li>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
