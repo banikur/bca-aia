@@ -22,7 +22,7 @@
                 <div class="nk-widget nk-widget-highlighted">
                     <h4 class="nk-widget-title"><span>{{ __('Selamat Datang') }}</span></h4>
                     <div class="nk-widget-content">
-                        <span style="color:white">History Reward Anda : {{ $count_point }} Point</span>
+                        <span style="color:white">History Reward Anda : {{ number_format($count_point,0,',','.') }} Point</span>
                         <br/>
                         <span style="color:white">Posisi Klasemen : {{$your_rank}} </span>
                     </div>

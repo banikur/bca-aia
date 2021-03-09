@@ -24,7 +24,7 @@ class FeedbackController extends Controller
         DB::table('tbl_point_user')->insert([
             'id_user'=> Auth::user()->id,
             'objective'=> 'Testimoni',
-            'point'=> 10,
+            'point'=> 20,
             ]);
         return back();
     }

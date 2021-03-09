@@ -34,7 +34,7 @@ class PostController extends Controller
         DB::table('tbl_point_user')->insert([
             'id_user' => Auth::user()->id,
             'objective' => 'Unggah Aktifitas',
-            'point' => 10,
+            'point' => 50,
         ]);
         return back();
     }

@@ -23,6 +23,10 @@ Route::get('/comming-soon', function () {
     return view('commingsoon');
 });
 
+Route::get('/comming-soon-v2', function () {
+    return view('template.old.commingsoon2');
+});
+
 Route::get('/avatar', function () {
     return view('animasi.avatar');
 });

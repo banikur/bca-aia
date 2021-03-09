@@ -12,7 +12,7 @@
                     <li class="scroll"><a class="navbar-brand" href="{{ url('/home') }}">Gallery</a></li>
                     <li class="scroll"><a class="navbar-brand" href="{{ url('/avatar') }}">Avatar</a></li>
                     <li class="scroll"><a class="navbar-brand" href="{{ url('/review') }}">Testimoni</a></li>
-                    <li class="scroll"><a class="navbar-brand" href="{{ url('/mini-games') }}">Mini Games</a></li>
+                    <!-- <li class="scroll"><a class="navbar-brand" href="{{ url('/mini-games') }}">Mini Games</a></li> -->
                     <li class="scroll"><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" title="Sign Out"><i class="fa fa-sign-out"></i></a> </li>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
